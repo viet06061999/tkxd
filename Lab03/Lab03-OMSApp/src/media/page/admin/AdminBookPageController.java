@@ -1,16 +1,14 @@
-package admin.page;
+package media.page.admin;
 
 import abstractdata.IDataManageController;
 import api.MediaApi;
-import cart.CartController;
 import com.oms.bean.Book;
 import com.oms.bean.Media;
 import editdialog.BookEditDialog;
-import media.MediaSearchPane;
-import media.MediaSinglePane;
-import media.book.BookSearchPane;
-import media.book.BookSinglePane;
-import user.page.UserMediaPageController;
+import media.pane.MediaSearchPane;
+import media.pane.MediaSinglePane;
+import media.pane.physical.book.BookSearchPane;
+import media.pane.physical.book.BookSinglePane;
 
 import java.util.List;
 import java.util.Map;

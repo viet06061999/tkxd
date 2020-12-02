@@ -1,6 +1,6 @@
-package media.book;
+package media.pane.physical.book;
 
-import media.physical.PhysicalMediaSearchPane;
+import media.pane.physical.PhysicalMediaSearchPane;
 
 import javax.swing.*;
 import java.util.Map;

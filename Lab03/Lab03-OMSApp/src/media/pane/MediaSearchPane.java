@@ -1,4 +1,4 @@
-package media;
+package media.pane;
 
 import java.util.Map;
 

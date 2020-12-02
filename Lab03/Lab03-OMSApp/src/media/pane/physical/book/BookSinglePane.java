@@ -1,8 +1,8 @@
-package media.book;
+package media.pane.physical.book;
 
 import com.oms.bean.Book;
 import com.oms.bean.Media;
-import media.physical.PhysicalMediaSinglePane;
+import media.pane.physical.PhysicalMediaSinglePane;
 
 import javax.swing.*;
 

@@ -1,4 +1,4 @@
-package user.page;
+package media.page.user;
 
 import java.awt.Dimension;
 import java.awt.event.ActionEvent;
@@ -13,7 +13,6 @@ import com.oms.bean.Media;
 import abstractdata.ADataListPane;
 import abstractdata.ADataPageController;
 import abstractdata.ADataSinglePane;
-import user.page.UserMediaPageController;
 
 @SuppressWarnings("serial")
 public class UserMediaListPane extends ADataListPane<Media>{

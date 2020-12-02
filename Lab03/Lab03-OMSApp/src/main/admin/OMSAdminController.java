@@ -1,8 +1,6 @@
 package main.admin;
 
-import admin.page.AdminBookPageController;
-import cart.CartController;
-import user.page.UserBookPageController;
+import media.page.admin.AdminBookPageController;
 
 import javax.swing.*;
 

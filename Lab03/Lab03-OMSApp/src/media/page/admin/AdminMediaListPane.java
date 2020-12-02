@@ -1,13 +1,11 @@
-package admin.page;
+package media.page.admin;
 
 import abstractdata.ADataListPane;
 import abstractdata.ADataPageController;
 import abstractdata.ADataSinglePane;
 import com.oms.bean.Media;
-import user.page.UserMediaPageController;
 
 import javax.swing.*;
-import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 

@@ -1,4 +1,4 @@
-package user.page;
+package media.page.user;
 
 import com.oms.bean.Media;
 

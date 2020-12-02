@@ -1,6 +1,6 @@
-package media.physical;
+package media.pane.physical;
 
-import media.MediaSearchPane;
+import media.pane.MediaSearchPane;
 
 import java.util.Map;
 

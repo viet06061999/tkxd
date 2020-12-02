@@ -28,7 +28,7 @@ public class OMSUser extends JFrame {
 		tabbedPane.addTab("Digital Video Discs", null, new JPanel(), "Digital Video Discs");
 
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setTitle("Online Media System for User");
+		setTitle("Nguyễn Bắc Việt_20173464");
 		setSize(WINDOW_WIDTH, WINDOW_HEIGHT);
 		setVisible(true);
 	}

@@ -3,7 +3,7 @@ package main.user;
 import javax.swing.JPanel;
 
 import cart.CartController;
-import user.page.UserBookPageController;
+import media.page.user.UserBookPageController;
 
 public class OMSUserController {
 	private CartController cartController;
