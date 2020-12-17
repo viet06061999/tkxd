@@ -74,9 +74,7 @@ public class CartDialog extends JDialog{
 		c.gridy = 2;
 		customerAddressField = new JTextField(15);
 		add(customerAddressField, c);
-		
 
-		
 		customerNameField.addKeyListener(new KeyAdapter() {
 			@Override
 			public void keyTyped(KeyEvent e) {

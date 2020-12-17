@@ -76,14 +76,10 @@ public class Book extends PhysicalMedia {
 	public boolean match(Media media) {
 		if (media == null)
 			return true;
-		
-		
 		boolean res = super.match(media);
 		if (!res) {
 			return false;
 		}
-		
-		
 		if (!(media instanceof Book))
 			return false;
 		Book book = (Book) media;

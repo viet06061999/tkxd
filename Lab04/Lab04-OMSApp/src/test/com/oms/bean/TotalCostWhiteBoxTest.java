@@ -1,33 +1,50 @@
-//package com.oms.bean;
-//
-//import org.junit.Before;
-//import org.junit.Test;
-//
-//import java.util.ArrayList;
-//
-//import static org.junit.Assert.assertEquals;
-//
-//public class TotalCostWhiteBoxTest {
-//    Order order;
-//
-//    @Before
-//    public void setUp() throws Exception {
-//        order = new Order();
-//        ArrayList orderLines = new ArrayList<OrderLine>();
-//        OrderLine orderLine = new OrderLine("1", "Book", 2, 10000);
-//        orderLines.add(orderLine);
-//        order.setOrderLines(orderLines);
-//    }
-//
-//    @Test(expected = IllegalArgumentException.class)
-//    public void getTotalCostWithCantCustomer() {
-//        order.getTotalCost("Tân Yên, Bắc Giang");
-//    }
-//
-//    @Test
-//    public void getTotalCostWithCantCustomerHN() {
-//        float expected = 20000;
-//        float actual = order.getTotalCost("Hai Bà Trưng, HN");
-//        assertEquals("Lay tong gia sai",expected, actual, 0.00001);
-//    }
-//}
+package com.oms.bean;
+
+import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.junit.runners.Parameterized;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collection;
+
+import static org.junit.Assert.assertEquals;
+
+@RunWith(Parameterized.class)
+public class TotalCostWhiteBoxTest {
+    Order  order = new Order();
+    Double expected = 0.0;
+
+    public TotalCostWhiteBoxTest(String address, ArrayList<OrderLine> orderLines, Double expected) throws Exception {
+        super();
+        System.out.println(address);
+        System.out.println(orderLines);
+        System.out.println(expected);
+        order.setCustomerAddress(address);
+        order.setOrderLines(orderLines);
+        this.expected = expected;
+        order.setOrderLines(orderLines);
+    }
+
+    @Parameterized.Parameters
+    public static Collection<Object[]> primeNumbers() {
+        return Arrays.asList(new Object[][] {
+                { "Hai Bà Trưng, Hà Nội",setWeight(2), 122000.0},
+                {  "Hai Bà Trưng, Hà Nội",setWeight(4), 127000.0},
+                { "Tân yên, Bắc Giang",setWeight(0.5f), 130000.0 }
+        });
+    }
+
+
+    @Test
+    public void getTotalCost() {
+        assertEquals("Lay tong gia sai",expected, order.getTotalCost(), 0.00001);
+    }
+
+    private static ArrayList<OrderLine>  setWeight(float weight){
+        ArrayList orderLines = new ArrayList<OrderLine>();
+        OrderLine orderLine = new OrderLine("1", "Book", 1, 100000, weight);
+        orderLines.add(orderLine);
+        return  orderLines;
+    }
+}

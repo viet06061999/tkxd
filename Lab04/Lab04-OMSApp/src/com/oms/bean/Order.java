@@ -97,9 +97,11 @@ public class Order {
         }
         double deliverPrice = 0;
         if (isAddress) {
-            deliverPrice = 22000 + (weight - 3) >= 0 ? ((weight - 3) / 0.5) * 2500 : 0;
+            deliverPrice = (weight - 3) >= 0 ? ((weight - 3) / 0.5) * 2500 : 0;
+            deliverPrice +=22000;
         } else {
-            deliverPrice = 30000 + (weight - 0.5) >= 0 ? ((weight - 0.5) / 0.5) * 2500 : 0;
+            deliverPrice =(weight - 0.5) >= 0 ? ((weight - 0.5) / 0.5) * 2500 : 0;
+            deliverPrice+=30000;
         }
         return cost + deliverPrice;
     }
