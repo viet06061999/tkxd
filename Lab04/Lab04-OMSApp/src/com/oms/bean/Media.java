@@ -70,8 +70,6 @@ public class Media {
 	public boolean match(Media media) {
 		if (media == null)
 			return true;
-		
-		
 		if (media.id != null && !media.id.equals("") && !this.id.contains(media.id)) {
 			return false;
 		}

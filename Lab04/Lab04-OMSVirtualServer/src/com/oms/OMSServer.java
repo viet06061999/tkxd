@@ -30,7 +30,6 @@ public class OMSServer {
 				DigitalVideoDiscService.class.getCanonicalName()
 		);
 
-		
 		try {
 			jettyServer.start();
 			jettyServer.join();
