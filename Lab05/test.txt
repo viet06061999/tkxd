@@ -1,0 +1,11 @@
+
+3.open closed
+Lớp ADataListPane áp dụng nguyên lý open close.
+Việc áp dụng như vậy đem lại lợi ích:
+Điều đó có nghĩa là hành vi của mô-đun có thể mở rộng. Khi yêu cầu hệ thống thay đổi, chúng ta có thể mở rộng mô-đun để có thể đáp ứng các hành vi mới thoả mãn yêu cầu. Nói một cách khác, chúng ta có thể thay đổi cách mà mô-đun làm việc. 
+Mở rộng mô-đun không kéo theo việc thay đổi mã nguồn của mô-đun
+Cụ thể Cụ thể chỉ cần cài đặt phương thức decorateSinglePane(ADataSinglePane<T> singlePane);
+4. Nguyên lý thay thế liskov
+AdminMediaListPane và UserMediaListPane vi phạm nguyên lý thay thế liskov vì 2 lớp này kế thừa từ ADataListPane do đó chúng đều là ADataListPane nhưng rõ ràng 2 lớp đó là 2 lớp khác nhau không thể thay thế được cho nhau do chúng cài đặt phương thức decorateSinglePane(ADataSinglePane<T> singlePane) khác nhau.
+AdminMediaListPane và UserMediaListPane sẽ không cài đặt phương thức decorateSinglePane(ADataSinglePane<T> singlePane) mà để phương thức này là abstract và 2 lớp trên cũng là abstract và khi phương thức createListPane của AdminMediaPageController
+và UserMediaPageController sẽ tạo AdminMediaListPane và UserMediaListPane bằng cách khởi tạo lớp vô danh anonymous
